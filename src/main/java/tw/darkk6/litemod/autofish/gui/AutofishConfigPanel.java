@@ -12,7 +12,7 @@ import com.mumfrey.liteloader.client.gui.GuiCheckbox;
 import com.mumfrey.liteloader.modconfig.ConfigPanel;
 import com.mumfrey.liteloader.modconfig.ConfigPanelHost;
 
-public class AutofisgConfigPanel extends Gui implements ConfigPanel {
+public class AutofishConfigPanel extends Gui implements ConfigPanel {
 
 	private Minecraft mc=Minecraft.getMinecraft();
 	private Config config;

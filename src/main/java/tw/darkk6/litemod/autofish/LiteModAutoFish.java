@@ -13,7 +13,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.ITextComponent;
-import tw.darkk6.litemod.autofish.gui.AutofisgConfigPanel;
+import tw.darkk6.litemod.autofish.gui.AutofishConfigPanel;
 import tw.darkk6.litemod.autofish.util.Config;
 import tw.darkk6.litemod.autofish.util.Lang;
 import tw.darkk6.litemod.autofish.util.Log;
@@ -194,7 +194,7 @@ public class LiteModAutoFish implements InitCompleteListener, Tickable, Permissi
 /********* Gui 設定 ********/
 	@Override
 	public Class<? extends ConfigPanel> getConfigPanelClass() {
-		return AutofisgConfigPanel.class;
+		return AutofishConfigPanel.class;
 	}
 /********* Mod 基本資訊 *********/
 	@Override
