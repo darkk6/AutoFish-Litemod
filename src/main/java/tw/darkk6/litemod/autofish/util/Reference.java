@@ -9,7 +9,7 @@ public class Reference {
 	public static final String LOG_TAG="AUTOFISH";
 	public static final String TIME_REPORT_STR="#Hi Autofisher!";
 	
-	public static final float PERMIT_VER=1.0f;
+	public static final float PERMIT_VER=2.0f;
 	public static final String PERMIT_CAN="autofish";
 	public static final String PERMIT_FULLNODE="mod."+MOD_ID+"."+PERMIT_CAN;
 }

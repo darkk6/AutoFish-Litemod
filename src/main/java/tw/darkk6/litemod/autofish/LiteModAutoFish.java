@@ -54,7 +54,7 @@ public class LiteModAutoFish implements InitCompleteListener, Tickable, Permissi
 
 	@Override
 	public void onChat(ITextComponent chat, String msg){
-		if(startFishingMs==-1) return;//沒有在自動釣魚
+		if( !config.isPermitted || startFishingMs==-1) return;//沒有在自動釣魚
 		if(msg.contains(Reference.TIME_REPORT_STR)){
 			Minecraft.getMinecraft().thePlayer.sendChatMessage(Lang.get("autofishd.msg.iamautofishing"));
 		}
@@ -62,6 +62,7 @@ public class LiteModAutoFish implements InitCompleteListener, Tickable, Permissi
 	
 	@Override
 	public void onTick(Minecraft minecraft, float partialTicks, boolean inGame, boolean clock) {
+		if(!config.isPermitted) return;
 		//是否抓到魚由 soundPlay 負責
 		if (inGame && minecraft.thePlayer != null) {
 			EntityPlayer player = minecraft.thePlayer;
@@ -107,7 +108,7 @@ public class LiteModAutoFish implements InitCompleteListener, Tickable, Permissi
 	//這是 Minecraft 內建的 Event , 用來偵測是否抓到魚了 
 	@Override
 	public void soundPlay(ISound soundIn, SoundEventAccessor accessor) {
-		if(soundIn==null || soundIn.getSoundLocation()==null) return;
+		if(!config.isPermitted || soundIn==null || soundIn.getSoundLocation()==null) return;
 		String soundName=soundIn.getSoundLocation().getResourcePath();
 		if(!config.soundName.equals(soundName)) return;
 		//確認一下是自己抓到的，理論上沒問題
