@@ -1,0 +1,4 @@
+ - v 1.0 - mc 1.9.4
+
+	Port to Liteloader first release
+	Add show sound distance option

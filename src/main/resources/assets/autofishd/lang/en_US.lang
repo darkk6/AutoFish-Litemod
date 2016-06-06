@@ -1,0 +1,11 @@
+autofishd.setting.gui.title=Auto fish Options
+autofishd.setting.enable=Enable AutoFish
+autofishd.setting.preventBreak=Prevent fishing rod broken
+autofishd.setting.switch=Switch fishing rod
+autofishd.setting.checkdistance=Check sound distance
+autofishd.setting.showdistance=Show the distance
+autofishd.setting.maxdistance=Max distance
+autofishd.setting.soundname=Sound event name
+autofishd.setting.breakvalue=Prevent break value
+autofishd.msg.iamautofishing=Hi! I am Autofihing.
+autofishd.msg.logdistance=Sound distance : 

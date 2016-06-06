@@ -1,0 +1,69 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = 'sponge'
+            url = 'http://repo.spongepowered.org/maven'
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+        classpath 'org.spongepowered:mixingradle:0.4-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.liteloader'
+apply plugin: 'org.spongepowered.mixin'
+
+version = "1.0"
+group = "tw.darkk6.litemod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "AutoFishD"
+
+compileJava {
+    // sourceCompatibility = 1.7
+    // targetCompatibility = 1.7
+    options.encoding = 'UTF-8'
+}
+
+minecraft {
+    version = "1.9.4"
+    mappings = "snapshot_20160518"
+    if (file('../0-ClientRun').exists()) {
+		runDir = "../0-ClientRun"
+	} else {
+		runDir = "0-ClientRun"
+	}
+}
+
+sourceSets {
+    main {
+        // Refmap declaration must match the refmap name specified in the json config
+        refMap = "mixins.autofishd.refmap.json"
+    }
+}
+
+mixin {
+    defaultObfuscationEnv notch
+}
+
+litemod {
+    json {
+		// build 的時候會把這些資訊寫到 litemod.json 中
+        name = "autofishd"
+		author = "darkk6"
+        mcversion = "1.9.4"
+    }
+}
+
+jar {
+    from litemod.outputs
+}

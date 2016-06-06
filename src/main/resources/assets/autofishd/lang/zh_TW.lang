@@ -1,0 +1,11 @@
+autofishd.setting.gui.title=Auto fish 設定
+autofishd.setting.enable=啟用 AutoFish
+autofishd.setting.preventBreak=防止釣竿損壞
+autofishd.setting.switch=更換釣竿
+autofishd.setting.checkdistance=檢查聲音距離
+autofishd.setting.showdistance=顯示聲音距離
+autofishd.setting.maxdistance=聲音與浮標最大距離
+autofishd.setting.soundname=上鉤聲音名稱
+autofishd.setting.breakvalue=防止損壞耐久值
+autofishd.msg.iamautofishing=嗨! 我正在自動釣魚
+autofishd.msg.logdistance=聲音距離 : 
