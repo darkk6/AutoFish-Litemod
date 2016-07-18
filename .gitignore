@@ -1,0 +1,11 @@
+.classpath
+.gradle
+.project
+.settings
+bin
+build
+gradle
+gradlew
+gradlew.bat
+build.number
+*.launch

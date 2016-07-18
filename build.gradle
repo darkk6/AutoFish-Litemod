@@ -35,7 +35,7 @@ compileJava {
 }
 
 minecraft {
-    version = "1.9.4"
+    version = "1.10.2"
     mappings = "snapshot_20160518"
     if (file('../0-ClientRun').exists()) {
 		runDir = "../0-ClientRun"
@@ -60,7 +60,7 @@ litemod {
 		// build 的時候會把這些資訊寫到 litemod.json 中
         name = "autofishd"
 		author = "darkk6"
-        mcversion = "1.9.4"
+        mcversion = "1.10.2"
     }
 }
 

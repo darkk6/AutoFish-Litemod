@@ -3,7 +3,7 @@ package tw.darkk6.litemod.autofish.util;
 public class Reference {
 	public static final String MOD_ID="autofishd";
 	public static final String MOD_NAME="AutoFish";
-	public static final String MOD_VER="1.0-mc1.9.4";
+	public static final String MOD_VER="1.0-mc1.10.2";
 	public static final String MOD_CONFIG="autofishd.json";
 	
 	public static final String LOG_TAG="AUTOFISH";
